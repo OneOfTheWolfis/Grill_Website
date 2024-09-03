@@ -1,3 +1,5 @@
+/* General Styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,16 +17,21 @@ body {
     background-size: cover;
 }
 
+
+/* Header Styles */
+
 header {
-    width: 100vw;
-    height: 150px;
+    width: 100%;
+    height: auto;
+    /* Allow content to dictate height */
     background: #ffbcbc;
     color: #ffffff;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    padding: 1em 0;
+    /* Use em for padding */
 }
 
 nav ul {
@@ -37,22 +44,29 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
+    /* Reduced margin */
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2rem;
+    /* Use rem for font-size */
 }
 
 nav ul li a:hover {
     color: #ff6060;
 }
 
+
+/* Section Styles */
+
 section {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1000px;
+    /* Smaller max-width for better scaling */
     margin: 20px 0;
     padding: 20px;
     background: rgba(244, 244, 244, 0.9);
@@ -62,12 +76,8 @@ section {
     position: relative;
 }
 
-.social-icon {
-    width: 50px;
-    height: 50px;
-    margin-right: 8px;
-    vertical-align: middle;
-}
+
+/* Social Links */
 
 .social-link {
     display: flex;
@@ -75,6 +85,15 @@ section {
     justify-content: flex-start;
     margin-bottom: 10px;
     padding-left: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    /* Smaller icon size */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .social-link a {
@@ -86,14 +105,8 @@ section {
     color: #ff6060;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-}
+
+/* Work Section */
 
 #myWork {
     text-align: center;
@@ -124,8 +137,11 @@ section {
 
 .game-description h3 {
     margin-bottom: 10px;
-    font-size: 1.5em;
+    font-size: 1.3rem;
 }
+
+
+/* Image Grid */
 
 .work-images {
     display: flex;
@@ -135,9 +151,14 @@ section {
 }
 
 .work-images img {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 350px;
+    /* Set max-width to control size */
+    max-height: 350px;
+    /* Set max-height to control size */
+    width: auto;
+    /* Maintain aspect ratio */
     height: auto;
+    /* Maintain aspect ratio */
     border: 2px solid #ccc;
     border-radius: 5px;
     transform: rotate(var(--rotation, 0deg));
@@ -156,4 +177,30 @@ section {
 
 .work-images img:hover {
     transform: scale(1.05) rotate(var(--rotation, 0deg));
+}
+
+
+/* Media Queries for Smaller Devices */
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+        /* Adjust padding */
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        font-size: 1rem;
+        /* Smaller font size for small screens */
+    }
+    .work-images img {
+        max-width: 150px;
+        /* Control image size for smaller screens */
+        max-height: 150px;
+        /* Control image size for smaller screens */
+    }
 }
