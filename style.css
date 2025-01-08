@@ -295,4 +295,8 @@ section {
         width: 30px;
         margin-right: 5px;
     }
+    .site-content {
+        margin-top: 120px;
+        /* Example for smaller screens */
+    }
 }
