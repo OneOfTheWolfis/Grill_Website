@@ -90,10 +90,16 @@ body {
 }
 
 .site-content {
-    margin-top: 100px;
-    /* Adjust this value to match your header's height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* Ensure the content spans the full width */
+    text-align: center;
+    /* Center text inside sections */
     padding: 16px;
-    /* Optional: Add padding for better readability */
+    margin-top: 100px;
 }
 
 header {
