@@ -58,6 +58,7 @@ body {
     padding: 20px;
     box-shadow: 2px 0 5px rgba(252, 236, 236, 0.5);
     transition: left 0.3s ease;
+    z-index: 9999;
 }
 
 .pop-up-menu.open {
@@ -77,6 +78,23 @@ body {
 
 
 /* Header Styles */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #d38465;
+    /* or your header's background color */
+}
+
+.site-content {
+    margin-top: 100px;
+    /* Adjust this value to match your header's height */
+    padding: 16px;
+    /* Optional: Add padding for better readability */
+}
 
 header {
     position: fixed;
