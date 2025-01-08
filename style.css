@@ -278,9 +278,7 @@ section {
 /* Media Queries for Smaller Devices */
 
 @media (max-width: 768px) {
-    header {
-        padding: 10px 0;
-    }
+
     nav ul {
         flex-direction: column;
     }
